@@ -9,7 +9,7 @@ const NavBar = () => {
           <img src={"./imagenes/LogoMelo2.png"} />
         </a>
       </div>
-      <div>
+      <div className="btnMenu">
         <button
           class="navbar-toggler bg-light"
           type="button"
@@ -45,11 +45,12 @@ const NavBar = () => {
               <a href="#">Contacto</a>
             </li>
           </ul>
+          <div>
+          <CartWidget />
         </div>
       </div>
-      <div>
-        <CartWidget />
       </div>
+      
     </nav>
   );
 };
