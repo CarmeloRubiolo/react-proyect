@@ -12,13 +12,13 @@ function App() {
 
 
   return (
-    <div>
+    <div className="app">
       <header>
         <NavBar />
       </header>
       <main>
         <div>
-          <ItemListContainer greeting={"Bienvenidos !!"}/>
+          <ItemListContainer greeting={"Arma tu Tarjeta"}/>
           <ItemCount initial={0} stock={1} onAdd={handleOnAdd} />
         </div>
         

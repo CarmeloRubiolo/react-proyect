@@ -16,9 +16,13 @@ nav{
     text-decoration: none;
     color: white;
     margin: 0px 20px 0px 20px;
+    font-family: 'Michroma', sans-serif;
+    
 }
 .enlace a:hover{
     color: rgb(110, 240, 160);
+    font-size: 15px;
+    text-transform: uppercase;
 }
 .btnMenu{
     margin-right: 50px;

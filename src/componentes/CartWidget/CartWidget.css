@@ -3,5 +3,8 @@ button{
     background: none;
 }
 .cartWidget{
-    
+    height: 40px;
+}
+.cartWidget:hover{
+    height:50px;
 }

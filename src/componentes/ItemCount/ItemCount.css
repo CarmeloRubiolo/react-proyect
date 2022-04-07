@@ -14,7 +14,7 @@
     margin: 20px;
 }
 .decrement:hover{
-    background-color: black;
+    background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
     color: white;
 }
 
@@ -23,7 +23,7 @@
     margin: 20px;
 }
 .increment:hover{
-    background-color: black;
+    background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
     color: white;
 }
 .btnAgregar{
@@ -31,6 +31,6 @@
     border-radius: 10px;
 }
 .btnAgregar:hover{
-    background-color: black;
+    background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
     color: white;
 }

@@ -1,4 +1,10 @@
+.app{
+    text-align: center;
+    font-family: 'Michroma', sans-serif;
+}
 main{
     display:flex;
     justify-content: center;
 }
+
+
