@@ -1,0 +1,4 @@
+.card_master{
+    display: flex;
+    flex-direction: row;
+}

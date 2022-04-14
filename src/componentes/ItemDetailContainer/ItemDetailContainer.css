@@ -1,0 +1,30 @@
+.tittle{
+    text-align: center;
+    margin: 40px;
+}
+.loading{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.loader {
+    width: 70px;
+    height: 70px;
+    border: 5px solid;
+    border-color: #6ef0a0 transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 

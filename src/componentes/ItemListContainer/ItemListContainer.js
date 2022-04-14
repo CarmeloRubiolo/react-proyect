@@ -11,13 +11,12 @@ const ItemListContainer = (props) => {
         getProducts().then(prods => {
             setProducts(prods)
         }).catch(error => {
-            console.log(error)
         })
     }, [])
 
     return(
         <div>
-            <h1>{props.greeting}</h1>
+            <h1 className="tittle">{props.greeting}</h1>
             <ItemList products={products}/>
         </div>
         
