@@ -32,7 +32,7 @@ function App() {
             <Route path= '/list' element = {<ItemListContainer greeting={'Arma Tu Tarjeta'}/>} />
             <Route path= '/detail/:productId' element = {<ItemDetailContainer/>} />
           </Routes>
-          {/* <ItemCount initial={0} stock={1} onAdd={handleOnAdd} />  */}
+          {/* <ItemCount initial={0} stock={1} onAdd={handleOnAdd} /> */}
         </main>
       </BrowserRouter>
       

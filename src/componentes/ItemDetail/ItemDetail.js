@@ -1,8 +1,16 @@
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import { useState } from 'react'
 
-const ItemDetail = ({img, name, description, price}) => {
+const ItemDetail = ({img, name, description, price, stock, initial, onAdd}) => {
+
+
+    const [quantity, setQuantity] = useState(0)
+    const handleOnAdd = (count) => {
+        console.log(`Se agregó ${quantity} producto al carrito`)
+        setQuantity(count)
+      }
 
     return (
         <div className="card mb-3 border-0 center" >
@@ -22,8 +30,10 @@ const ItemDetail = ({img, name, description, price}) => {
                         
                     </div>
                     
-                    <ItemCount/>
                 </div>
+                <div>
+                        { quantity > 0 ? <Link className='btnFinalizarCompra' to='/cart'>Finalizar compra</Link> : <ItemCount initial={0} stock={stock} onAdd={handleOnAdd} />}
+                    </div>
                 </div>
                 
             </div>

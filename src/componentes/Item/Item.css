@@ -55,3 +55,10 @@
     width: 90%;
     border: 1px solid black;
 }
+
+
+@media (max-width: 768px){
+    .card_build{
+        margin: 30px;
+    } 
+}

@@ -1,13 +1,14 @@
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="logo">
-        <a class="navbar-brand" href="inicio">
+        <Link className="navbar-brand" to='/inicio'>
           <img src={"./imagenes/LogoMelo2.png"} />
-        </a>
+        </Link>
       </div>
       <div className="btnMenu">
         <button
@@ -23,26 +24,25 @@ const NavBar = () => {
         </button></div>
       
       <div class="d-flex" className="d-flex">
-        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item" className="enlace">
-              <a class="" aria-current="page" href="#">
+              <Link class="" aria-current="page" href="#" to='/inicio'>
                 Inicio
-              </a>
+              </Link>
             </li>
             <li class="nav-item" className="enlace">
-              <a class="" href="#">
+              <Link class="" href="#" to='/muestras'>
                 Muestras
-              </a>
+              </Link>
             </li>
             <li class="nav-item" className="enlace">
-              <a class="" href="#">
+              <Link class="" href="#" to='/'>
                 Arma tu tarjeta
-              </a>
+              </Link>
             </li>
             <li class="nav-item dropdown" className="enlace">
-              <a href="#">Contacto</a>
+              <Link href="#" to='contacto'>Contacto</Link>
             </li>
           </ul>
           <div>
