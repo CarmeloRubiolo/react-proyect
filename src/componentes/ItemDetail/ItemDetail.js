@@ -1,16 +1,20 @@
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import CartContext from '../../context/CartContext'
 
-const ItemDetail = ({img, name, description, price, stock, initial, onAdd}) => {
+const ItemDetail = ({id, img, name, description, price, stock, initial, onAdd}) => {
 
-
-    const [quantity, setQuantity] = useState(0)
+    const { addItem, isInCart } = useContext(CartContext)
+    
     const handleOnAdd = (count) => {
-        console.log(`Se agregó ${quantity} producto al carrito`)
-        setQuantity(count)
-      }
+
+        const productObj = {id, name, price}
+
+        addItem({...productObj, quantity: count})
+
+    }
 
     return (
         <div className="card mb-3 border-0 center" >
@@ -32,7 +36,7 @@ const ItemDetail = ({img, name, description, price, stock, initial, onAdd}) => {
                     
                 </div>
                 <div>
-                        { quantity > 0 ? <Link className='btnFinalizarCompra' to='/cart'>Finalizar compra</Link> : <ItemCount initial={0} stock={stock} onAdd={handleOnAdd} />}
+                        { isInCart(id) ? <Link className='btnFinalizarCompra' to='/cart'>Finalizar compra</Link> : <ItemCount initial={0} stock={stock} onAdd={handleOnAdd} />}
                     </div>
                 </div>
                 
