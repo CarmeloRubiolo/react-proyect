@@ -1,0 +1,29 @@
+.cartMaster{
+    width: 100%;
+    margin: 20px;
+}
+#offcanvasRight{
+    width: 600px;
+}
+.header_cart{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header_cart h4 {
+    margin-top:20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.look-cart{
+    background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
+    color: white;
+    border: 1px solid black;
+}
+.look-cart:hover{
+    height: 50px;
+    width: 300px;
+}
+.dont-element{
+    text-align: center;
+    margin-top: 50px;
+}

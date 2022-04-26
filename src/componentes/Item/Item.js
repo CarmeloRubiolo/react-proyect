@@ -5,7 +5,7 @@ const Card = ({id, name, price, img}) => {
     
 
     return(
-            <div className="col">
+            <div className="col-md-3">
                 <div className="card card_build" >
                     <h5 className="card-title">{name}</h5>
                     <img src={img} className="card-img-top img-fluid" alt={name}/>

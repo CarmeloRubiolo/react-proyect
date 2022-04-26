@@ -10,7 +10,7 @@
     text-align: center;
 }
 .card_build img{
-    width: 300px;
+    width: 300;
     margin: 30px;
 }
 .card_build{
@@ -19,7 +19,7 @@
 }
 .card_build{
     height: 100%;
-    width: 80%;
+    width: 100%;
     padding: 20px;
     display:flex;
     align-items: center;
@@ -52,7 +52,7 @@
 }
 .card_build:hover{
     transition-duration: 1s;
-    width: 90%;
+    width: 110%;
     border: 1px solid black;
 }
 
