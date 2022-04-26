@@ -17,7 +17,6 @@
 .look-cart{
     background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
     color: white;
-    border: 1px solid black;
 }
 .look-cart:hover{
     height: 50px;
@@ -26,4 +25,22 @@
 .dont-element{
     text-align: center;
     margin-top: 50px;
+}
+.footer_cart{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fin-compra{
+    text-decoration: none;
+    background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.fin-compra:hover{
+    color: black;
+}
+.btn-cart{
+    display: flex;
+    justify-content: center;
 }

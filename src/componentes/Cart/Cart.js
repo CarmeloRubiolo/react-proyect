@@ -30,8 +30,8 @@ const Cart = () => {
     }
     return(
         <div className="cartMaster">
-            <div className=''>
-            <button className="btn btn-primary look-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver carrito de compras</button>
+            <div className='btn-cart'>
+                <button className="btn btn-primary look-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver carrito de compras</button>
             </div>
             <div className="offcanvas offcanvas-end cardCart" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
@@ -46,10 +46,9 @@ const Cart = () => {
                     {cart.map(prod => <ItemCart key={prod.id} {...prod}/>)}
                     {/* <button onClick={() => removeItem(prod.id)}>Eliminar</button> */}
                 </div>
-                <div>
+                <div className='footer_cart'>
                     <p>Total a pagar: {total}</p>
-                    <div> <Link to='/' >Finalizar compra</Link></div>
-                    
+                    <div> <Link to='/' className="fin-compra">Finalizar compra</Link></div>
                 </div>
             </div> 
         </div>

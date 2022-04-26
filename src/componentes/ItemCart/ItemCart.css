@@ -17,3 +17,10 @@
     list-style: none;
     margin: 10px;
 }
+.btnEliminar {
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    
+}
