@@ -3,29 +3,82 @@ import CartContext from '../../context/CartContext'
 import ItemCart from '../ItemCart/ItemCart'
 import './Cart.css'
 import { Link } from 'react-router-dom'
+import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
+import { firestoreDb } from '../../service/firebase/index'
 
 
 const Cart = () => {
 
+    /* const [loading, setLoading] = useState(false) */
 
-    const { cart, removeItem, getQuantity } =useContext(CartContext)
+    const { cart, removeItem, getQuantity, getTotal } =useContext(CartContext)
 
+/*     const createOrder = () => {
+        setLoading(true)
+        const objOrder = {
+            items: cart,
+            buyer: {
+                name: 'Carmelo Rubiolo',
+                phone: ' 3516661656',
+                email: 'melo_rubiolo@hotmail.com'
+            },
+            total: getTotal(),
+            date: new Date()
+        }
 
-    const [total, setTotal] = useState(0)
-    useEffect (() => {
-        const handleSumar = () => {
-            const sumar = cart.map((prod) => prod.price)
-            .reduce((prev, curr) => {
-                return prev + curr;
-            }, 0);
-            setTotal(sumar)
-        };
-        handleSumar();
+        const ids = cart.map(prod => prod.id)
+
+        const batch = writeBatch(firestoreDb)
+
+        const collectionRef = collection(firestoreDb, 'products')
+
+        const outOfStock = []
+
+        getDocs(query(collectionRef, where(documentId(), 'in', ids)))
+            .then(response => {
+                response.docs.forEach(doc => {
+                    const dataDoc = doc.data()
+                    const prodQuantity = cart.find( prod => prod.id === doc.id)?.getQuantity
+                    if(dataDoc.stock >= prodQuantity) {
+                        batch.update(doc.ref, { stock: dataDoc.stock - prodQuantity })
+                    }else {
+                        outOfStock.push({id: doc.id, ...dataDoc})
+                    }
+                })
+            }).then( () => {
+                if(outOfStock.length === 0) {
+                    const collectionRef = collection(firestoreDb, 'orders')
+                    return addDoc(collectionRef, objOrder)
+                } else {
+                    return Promise.reject({ name: 'outOfStockError', products: outOfStock})
+                }
+            }).then(( { id }) => {
+                batch.commit()
+                console.log(`El id de la orden es ${id}`)
+            }).catch(error => {
+                console.log(error)
+            }).finally( () => {
+                setLoading(false)
     })
+    }
+    if(loading) {
+        return (
+            <h1>Se está generando su orden</h1>
+        )
+    }
 
+ */
+    
     if(getQuantity() === 0) {
         return(
-            <h1 className='dont-element'>No hay elementos en el carrito</h1>
+            <div>
+                <h1 className='dont-element'>No hay elementos en el carrito</h1>
+                <div className="btn-buildCardMaster">
+                    <button className='btn-buildCard'>
+                        <Link to='/' className='link-BuildCard'>Arma tu tarjeta</Link>
+                    </button> 
+                </div> 
+            </div> 
         )
     }
     return(
@@ -47,11 +100,13 @@ const Cart = () => {
                     {/* <button onClick={() => removeItem(prod.id)}>Eliminar</button> */}
                 </div>
                 <div className='footer_cart'>
-                    <p>Total a pagar: {total}</p>
-                    <div> <Link to='/' className="fin-compra">Finalizar compra</Link></div>
+                    <p>Total a pagar: {getTotal()}</p>
+                    <div> <Link to='/order' className="fin-compra">Finalizar compra</Link></div>
                 </div>
             </div> 
         </div>
     )    
+    
+
 }
 export default Cart

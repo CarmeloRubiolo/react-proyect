@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="logo">
-        <Link className="navbar-brand" to='/inicio'>
+        <Link className="navbar-brand" to='/muestras'>
           <img src={"./imagenes/LogoMelo2.png"} />
         </Link>
       </div>
@@ -26,11 +26,11 @@ const NavBar = () => {
       <div class="d-flex" className="d-flex">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" className="enlace">
+            {/* <li class="nav-item" className="enlace">
               <Link class="" aria-current="page" href="#" to='/inicio'>
                 Inicio
               </Link>
-            </li>
+            </li> */}
             <li class="nav-item" className="enlace">
               <Link class="" href="#" to='/muestras'>
                 Muestras
@@ -40,9 +40,6 @@ const NavBar = () => {
               <Link class="" href="#" to='/'>
                 Arma tu tarjeta
               </Link>
-            </li>
-            <li class="nav-item dropdown" className="enlace">
-              <Link href="#" to='contacto'>Contacto</Link>
             </li>
           </ul>
           <div>

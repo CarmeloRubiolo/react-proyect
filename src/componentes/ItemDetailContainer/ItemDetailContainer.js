@@ -15,6 +15,7 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() => {
+        setLoading(true)
         /* getProductById(productId).then(item => {
             setProduct(item)
         }).catch(err => {
@@ -24,7 +25,17 @@ const ItemDetailContainer = () => {
         }) */
         getDoc(doc(firestoreDb, 'products', productId)).then(response => {
             const product = { id: response.id, ...response.data()}
-            setProduct(product) 
+                setProduct(product)
+            
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        .finally(() => {
+            setTimeout(() => {
+                setLoading(false)
+            }, 1000)
+            
         })
 
         return (() => {
@@ -36,7 +47,7 @@ const ItemDetailContainer = () => {
         <div>
             {
                 loading ?
-                <div className="loading"><span className="loader"></span></div> :
+                <div className="cargando"><span className="loader"></span></div> :
                     product ?
                     <ItemDetail {...product} /> :
                     <h1>El producto no existe</h1>

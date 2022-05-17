@@ -12,7 +12,7 @@ const Counter = ({initial, stock, onAdd}) => {
     }
 
     const increment = () => {
-        if(count < stock){
+        if(count <= 0){
            setCount(count + 1) 
         }
         

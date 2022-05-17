@@ -7,9 +7,11 @@ import { firestoreDb } from '../../service/firebase'
 
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
+    /* const [loading, setLoading] = useState(false) */
     
 
     useEffect(() => {
+        /* setLoading(true) */
         /*  getProducts().then(prods => {
             setProducts(prods)
         }).catch(error => {
@@ -20,6 +22,12 @@ const ItemListContainer = (props) => {
             })
             setProducts(products)
         })
+        /* .catch(error => {
+            console.log(error)
+        })
+        .finally(() => {
+            setLoading(false)
+        }) */
         
     }, [])
 

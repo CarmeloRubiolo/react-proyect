@@ -44,3 +44,19 @@
     display: flex;
     justify-content: center;
 }
+.link-BuildCard{
+    border: 1px solid black;
+    text-decoration: none;
+    background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.link-BuildCard:hover{
+    color: black;
+}
+.btn-buildCardMaster{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}

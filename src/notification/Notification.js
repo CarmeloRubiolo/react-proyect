@@ -1,16 +1,17 @@
 import { useState, createContext, useContext} from 'react'
+import '../notification/Notification.css'
 
 const Notification = ({message, severity, otherClass = 'Message'}) => {
-    const notificationStyles = {
-        position: 'absolute',
-        bottom:10,
-        left: '60%',
+    /* const notificationStyles = {
+        position: 'fixed',
+        right: '30px',
+        bottom: '30px',
         width: 'auto',
         height: 'auto',
         padding: '10px 20px 10px 20px',
         backgroundColor: '#6ef0a0',
         color: 'black',
-    }
+    } */
 
     if(message === '') {
         return null
@@ -18,7 +19,7 @@ const Notification = ({message, severity, otherClass = 'Message'}) => {
 
     const config = true ? 
     {
-        style : notificationStyles,
+        /* style : notificationStyles, */
         className: `${severity === 'success' ? 'Success' : 'Error'} ${otherClass || ''} `
     } : {}
 

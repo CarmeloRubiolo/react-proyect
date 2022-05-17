@@ -1,0 +1,56 @@
+#inicio-inv{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    width: 600px;
+    margin-top: 60px;
+}
+.main-inicio{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+.line-through {
+    margin-top: 120px;
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.photograph {
+    text-align: center;
+    font-size: 60px;
+    font-family:'Parisienne', cursive;
+    font-weight: 400;
+    color: #5b5f5d;
+}
+.line-through:before {
+
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #33D9B2;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1px);
+}
+.line-through span {
+    background: white;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 0 0.5rem;
+}
+.cell{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.img-muestra{
+    height: 300px;
+    width:auto;
+}
+.muestra-master{
+    display:flex;
+    justify-content: center;
+}
