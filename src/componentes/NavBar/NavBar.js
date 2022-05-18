@@ -37,7 +37,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li class="nav-item" className="enlace">
-              <Link class="" href="#" to='/'>
+              <Link class="" href="#" to='/list'>
                 Arma tu tarjeta
               </Link>
             </li>

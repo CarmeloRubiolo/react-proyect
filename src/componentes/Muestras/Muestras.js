@@ -12,20 +12,26 @@ const Muestras = () => {
                 <h2 className="line-through photograph"><span>Invitaciones Digitales</span></h2>
             </div>
             <div >
-                <h2>Muestras !!</h2>
+                <h2 id="title-muestra">Muestras !!</h2>
                 <div className="muestra-master">
                     <div >
-                        <div className="">
+                        <div className="muestra-card">
                             <h3>Boda</h3>
                             <img className="img-muestra" src={"imagenes/imgmuestra.png"}></img>
-                            <a href='https://boda-carlaleonel.web.app' target='_blank'>Ver Muestra</a>
+                            <div id="look-muestra">
+                                <a href='https://boda-carlaleonel.web.app' target='_blank'>Ver Muestra</a>
+                            </div>
+                            
                         </div>
                     </div>
                     <div >
-                        <div className="">
+                        <div className="muestra-card">
                             <h3>1er Año</h3>
                             <img className="img-muestra" src={"imagenes/imgmuestra1.png"}></img>
-                            <a href='https://boda-carlaleonel.web.app' target='_blank'>Ver Muestra</a>
+                            <div id="look-muestra">
+                                <a href='https://boda-carlaleonel.web.app' target='_blank'>Ver Muestra</a>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

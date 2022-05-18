@@ -5,6 +5,7 @@ import { firestoreDb} from '../../service/firebase/index'
 import { collection, addDoc, getDocs, where, query,documentId, writeBatch } from "firebase/firestore"
 import { Link } from 'react-router-dom'
 
+
 //seteo el form vacio
 const buyerForm= {
     name:"",

@@ -52,5 +52,33 @@
 }
 .muestra-master{
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.muestra-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.muestra-card:hover{
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#title-muestra{
+    text-align: center;
+    margin: 40px;
+}
+#look-muestra{
+    border-radius: 10px;;
+    border: 1px solid black;
+    background: -webkit-linear-gradient(left, #0d2a33 0%,#6ef0a0 99%);
+    padding: 10px;
+    margin-bottom:30px;
+}
+#look-muestra a{
+    text-decoration: none;
+    color:black;
 }
