@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Invitaciones Digitales
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+> Este es un proyecto realizado para el curso de React JS. Es un E-commerce en el que el usuario podra como sera su tarjeta digital para su evento.
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation git clone
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para acceder al proyecto clonándolo, deberás ejecutar en consola: 
+```sh
+git clone  https://github.com/CarmeloRubiolo/react-proyect.git
+npm install 
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation download ZIP
+```sh
+Ir a “code” > download ZIP
+Descomprimir el archivo
+En la carpeta donde se encuentra “package.json” ejecutar en terminal: 
+npm install
+npm start
+```
+## Techs
 
-### `npm test`
+🛠️ React JS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ JavaScript
 
-### `npm run build`
+🛠️ HTML
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🛠️ CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Firebase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+***
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| orders | buyer: (contiene email, nombre, apellido y número de teléfono del comprador)
+            date: (fecha de la compra)
+            items: (array de  objetos donde cada objeto es un producto con id, name, price y quantity)
+            total: (precio total de la compra) |
+| products | 
+            img: (imagen)
+            name: (título)
+            price: (precio)
+            description: (descripcion del producto)
+            stock: (stock infinito) |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Breve descripción de los componentes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+***
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Al ingresar en la página, te encontrarás con la página de armar tu tarjeta, con la ruta "/list". Aquí encontrarás el componente "NavBar", donde aparece para ver muestras de tarjeta y para armar tu tarjeta que sería el "ItemListContainer", que muestra una lista de items, donde cada "Item" es una card que muestra una breve información sobre un producto. Además, cada "Item" contiene un botón que dirige al "ItemDetailContainer".
 
-## Learn More
+El "ItemDetailContainer" muestra, según el ID, el detalle ("ItemDetail") de un producto. El "ItemDetail" muestra una foto de lo que iría en la tarjeta(imagen ilustrativa), su título, su precio, y el stock(donde es infinito). Además, muestra el "ItemCount" que permite seleccionar solamente un producto y que se añade al carrito ("Cart"). Una vez agregado el producto, un botón permite navegar hacia el "Cart". También puede accederse al  Cart a través del "CartWidget", el ícono que se muestra en la "NavBar" cuando hay al menos un producto en el carrito.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+El carrito muestra un resumen de la compra, detallando por cada producto título, precio, total, y un botón para eliminar el producto. Además existe un botón para finalizar la compra, que conduce al componente "Order". El componente "Order" solicita nombre, apellido, email y número de teléfono del comprador, información que se sube a firebase en la colección "orders", junto con la fecha y un resumen de la compra.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Visualización de la página en el navegador
+![obs](https://user-images.githubusercontent.com/91704257/168946556-bacea26c-e0fe-46ce-98c5-af6a2ed9fadc.gif)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
